@@ -1,0 +1,21 @@
+[project]
+name = "bc-for-shiv"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "jax==0.11.2",
+    "flax==0.12.10",
+    "numpy>=2.1",
+    "h5py",
+    "robosuite",
+    "mediapy>=1.2.4",
+    "tqdm>=4.70.1",
+]
+
+[tool.uv]
+override-dependencies = [
+    "mujoco<3.4.0",
+]
+
+[tool.uv.sources]
+robosuite = { git = "https://github.com/ARISE-Initiative/robosuite.git", rev = "b9d8d3de5e3dfd1724f4a0e6555246c460407daa" }
